@@ -5,17 +5,31 @@
 
 import { RANKS, THRESH, MUSCLES, TOP_PCT_ARR, SUB } from '../data/metrics.js';
 
+
 export function epley(weight, reps) {
+  // Guard clauses for edge cases
+  if (reps <= 0 || weight <= 0) return 0;
   if (reps === 1) return weight;
+
+  // Cap reps at 15: prevents Brzycki's divide-by-zero and keeps estimates realistic
+  const effectiveReps = Math.min(reps, 15);
+
   // 1. Epley: Standard and aggressive
-  const epley1 = weight * (1 + reps / 30);
-  // 2. Brzycki: More conservative, highly accurate for 1–6 reps
-  const brzycki = weight / (1.0278 - 0.0278 * reps);
+  const epley1 = weight * (1 + effectiveReps / 30);
+  
+  // 2. Brzycki: More conservative, highly accurate for low reps
+  const brzycki = weight / (1.0278 - 0.0278 * effectiveReps);
+  
   // 3. Lander: A different linear regression often used as a middle ground
-  const lander = (100 * weight) / (101.3 - 2.67123 * reps);
-  // Return the average of the three
-  return (epley1 + brzycki + lander) / 3;
+  const lander = (100 * weight) / (101.3 - 2.67123 * effectiveReps);
+
+  // Calculate the average
+  const average = (epley1 + brzycki + lander) / 3;
+  
+  // Return rounded to 2 decimal places (e.g., 135.50)
+  return Math.round(average * 100) / 100; 
 }
+
 
 // ── RANK LOOKUP
 export function rankOf(mid, orm) {
