@@ -1,0 +1,20 @@
+{
+  "name": "LiftRank - Ranked Bodygraph",
+  "short_name": "LiftRank",
+  "description": "Track your gym performance with ranked muscle groups",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#08091a",
+  "theme_color": "#08091a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='40' fill='%2308091a'/%3E%3Cellipse cx='96' cy='44' rx='22' ry='26' fill='%23c8cee0' opacity='.7'/%3E%3Crect x='82' y='68' width='28' height='18' rx='6' fill='%23c8cee0' opacity='.5'/%3E%3Cpath d='M60 80 Q42 86 36 104L30 128L28 164L40 166L46 136Q50 112 64 100' fill='%233ecab4'/%3E%3Cpath d='M132 80 Q150 86 156 104L162 128L164 164L152 166L146 136Q142 112 128 100' fill='%233ecab4'/%3E%3Cpath d='M60 84 Q80 78 96 80 Q112 78 132 84L128 108Q96 118 64 108Z' fill='%233ecab4'/%3E%3Crect x='80' y='112' width='15' height='14' rx='3' fill='%23d4af37'/%3E%3Crect x='97' y='112' width='15' height='14' rx='3' fill='%23d4af37'/%3E%3Crect x='80' y='130' width='15' height='14' rx='3' fill='%23d4af37'/%3E%3Crect x='97' y='130' width='15' height='14' rx='3' fill='%23d4af37'/%3E%3Cpath d='M42 166 Q36 182 38 200L52 200Q56 186 54 168Z' fill='%233ecab4'/%3E%3Cpath d='M150 166 Q156 182 154 200L140 200Q136 186 138 168Z' fill='%233ecab4'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "fitness", "sports"],
+  "screenshots": []
+}
