@@ -76,10 +76,10 @@ function _innerSVG() {
     <g class="mr" id="I-thigh-r" data-m="mobility" onclick="LR.openSheet('mobility')">
       <path d="M85 173 Q93 178 95 212 Q95 242 89 258 L81 256 Q81 234 81 212 Q81 185 81 173Z" fill="#777"/>
     </g>
-    <g class="mr" id="I-tibia-l" data-m="run20k" onclick="LR.openSheet('run20k')">
+    <g class="mr" id="I-tibia-l" data-m="run5k" onclick="LR.openSheet('run5k')">
       <rect x="41" y="270" width="16" height="78" rx="5" fill="#777"/>
     </g>
-    <g class="mr" id="I-tibia-r" data-m="run20k" onclick="LR.openSheet('run20k')">
+    <g class="mr" id="I-tibia-r" data-m="run5k" onclick="LR.openSheet('run5k')">
       <rect x="91" y="270" width="16" height="78" rx="5" fill="#777"/>
     </g>
     <g class="mr" id="I-foot-l" data-m="vert" onclick="LR.openSheet('vert')">

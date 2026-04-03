@@ -89,7 +89,7 @@ export const MUSCLES = [
   { id: 'plank',    label: 'Plank',        measure: 'Max hold in seconds — flat forearm plank to form failure',        ex: 'Max Core Hold',  front: [], back: [], inner: ['I-core'],               type: 'score', unit: 'sec',   icon: '⏱️', cat: 'inner' },
   { id: 'cogspeed', label: 'Reflexes',     measure: '10000 ÷ your reaction time in ms — use humanBenchmark.com',     ex: '10000 / RT(ms)', front: [], back: [], inner: ['I-hand-l','I-hand-r'],  type: 'score', unit: 'pts',   icon: '⚡', cat: 'inner' },
   { id: 'mobility', label: 'Mobility',     measure: 'Sit-and-reach cm past toes — tape measure on floor',     ex: 'cm past toes',   front: [], back: [], inner: ['I-thigh-l','I-thigh-r'],type: 'score', unit: 'cm',    icon: '🤸', cat: 'inner' },
-  { id: 'run5k',   label: '20k Run',      measure: 'Average speed km/h over a 20 km run or time trial',      ex: 'Speed km/h',     front: [], back: [], inner: ['I-tibia-l','I-tibia-r'],type: 'score', unit: 'km/h',  icon: '🏃', cat: 'inner' },
+  { id: 'run5k',   label: '5k Run',      measure: 'Average speed km/h over a 5 km run or time trial',      ex: 'Speed km/h',     front: [], back: [], inner: ['I-tibia-l','I-tibia-r'],type: 'score', unit: 'km/h',  icon: '🏃', cat: 'inner' },
   { id: 'vert',     label: 'Vert Jump',    measure: 'Max vertical jump height in cm — chalk mark or jump mat',    ex: 'Max Height',     front: [], back: [], inner: ['I-foot-l','I-foot-r'],  type: 'score', unit: 'cm',    icon: '🚀', cat: 'inner' },
   { id: 'mass',     label: 'Total Mass',   measure: 'Bodyweight in kg — morning fasted, same scale each time',   ex: 'Target: 95kg',   front: [], back: [], inner: ['I-platform'],           type: 'score', unit: 'kg',    icon: '⚖️', cat: 'inner' },
 
