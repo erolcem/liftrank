@@ -114,12 +114,12 @@ function _renderOverallCard(logs) {
   injectBadge('ov-badge-wrap', ri, 64, 64);
 
   const emb = document.getElementById('ov-emblem');
-  emb.textContent = r.name[0] + ' ' + SUB[sub];
+  emb.textContent = SUB[sub];
   emb.style.color = r.c;
-  emb.style.background = 'rgba(8,9,26,.85)';
+  emb.style.background = r.c + '44';
   emb.style.borderColor = r.c + '44';
 
-  document.getElementById('ov-name').textContent = r.name;
+  document.getElementById('ov-name').textContent = r.name + ' ' + SUB[sub];
   document.getElementById('ov-name').style.color = r.c;
   document.getElementById('ov-top').textContent = `Top ${getPrecisePercentOverall(score)}% of athletes`;
   document.getElementById('ov-top').style.color = r.c;
