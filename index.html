@@ -277,8 +277,8 @@ body::before{
 .profile-badge-wrap{position:relative;margin-bottom:.5rem}
 .profile-badge-wrap svg{filter:drop-shadow(0 0 24px currentColor)}
 .profile-sub-emblem{
-  position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);
-  font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;
+  position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);
+  font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;
   padding:3px 10px;border-radius:9px;border:1px solid rgba(255,255,255,.2);
   backdrop-filter:blur(4px);white-space:nowrap
 }
@@ -803,13 +803,13 @@ body::before{
       <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       Progress<div class="nav-dot"></div>
     </button>
-    <button class="nav-btn" id="nav-profile" onclick="LR.goTo('profile')">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-      Profile<div class="nav-dot"></div>
-    </button>
     <button class="nav-btn" id="nav-habits" onclick="LR.goTo('habits')">
       <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
       Habits<div class="nav-dot"></div>
+    </button>
+    <button class="nav-btn" id="nav-profile" onclick="LR.goTo('profile')">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Profile<div class="nav-dot"></div>
     </button>
   </nav>
 

@@ -21,12 +21,12 @@ export function renderProfile() {
   // ── Hero badge
   injectBadge('profile-badge-wrap', ri, 96, 96);
   const emb = document.getElementById('profile-emblem');
-  emb.textContent = r.name + ' ' + SUB[sub];
+  emb.textContent = SUB[sub];
   emb.style.color = r.c;
-  emb.style.background = 'rgba(8,9,26,.85)';
+  emb.style.background = r.c + '44';
   emb.style.borderColor = r.c + '44';
 
-  document.getElementById('profile-rank-name').textContent = r.name;
+  document.getElementById('profile-rank-name').textContent = r.name + ' ' + SUB[sub];
   document.getElementById('profile-rank-name').style.color = r.c;
   document.getElementById('profile-top').textContent = `Top ${getPrecisePercentOverall(score)}% of all athletes`;
   document.getElementById('profile-top').style.color = r.c;
