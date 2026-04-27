@@ -56,14 +56,14 @@ function _innerSVG() {
     <g class="mr" id="I-core" data-m="plank" onclick="LR.openSheet('plank')">
       <rect x="55" y="104" width="38" height="58" rx="6" fill="#777"/>
     </g>
-    <g class="mr" id="I-hand-l" data-m="cogspeed" onclick="LR.openSheet('cogspeed')">
+    <g class="mr" id="I-hand-l" data-m="restHeart" onclick="LR.openSheet('restHeart')">
       <rect x="4" y="190" width="15" height="10" rx="3" fill="#777"/>
       <rect x="4"  y="181" width="3" height="11" rx="2" fill="#777"/>
       <rect x="8"  y="178" width="3" height="13" rx="2" fill="#777"/>
       <rect x="12" y="179" width="3" height="12" rx="2" fill="#777"/>
       <rect x="16" y="182" width="3" height="9"  rx="2" fill="#777"/>
     </g>
-    <g class="mr" id="I-hand-r" data-m="cogspeed" onclick="LR.openSheet('cogspeed')">
+    <g class="mr" id="I-hand-r" data-m="restHeart" onclick="LR.openSheet('restHeart')">
       <rect x="129" y="190" width="15" height="10" rx="3" fill="#777"/>
       <rect x="141" y="181" width="3" height="11" rx="2" fill="#777"/>
       <rect x="137" y="178" width="3" height="13" rx="2" fill="#777"/>
