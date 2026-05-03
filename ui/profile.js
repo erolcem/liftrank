@@ -96,7 +96,7 @@ export function renderProfile() {
                 <span class="cat-break-label">${cat.label}</span>
                 <span class="cat-break-rank" style="color:${catR.c}">${catR.name} ${SUB[catSub]}</span>
               </div>
-              <div class="cat-break-sub">Avg ${avg.toFixed(2)}/7 · Top ${((1 - avg/7)*100).toFixed(0)}%</div>
+              <div class="cat-break-sub">Avg ${avg.toFixed(2)}/7.0 · Top ${getPrecisePercentOverall(avg)}%</div>
             </div>
           </div>
           <div class="prog-outer" style="margin-bottom:14px">
