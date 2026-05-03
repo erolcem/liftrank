@@ -3,7 +3,7 @@
 // ════════════════════════════════════════════════════════
 
 import { RANKS, MUSCLES, SUB } from '../data/metrics.js';
-import { rankOf, getSubrank, latestORM, overallScore, getPrecisePercentOverall, parseDate } from '../engine/rank.js';
+import { rankOf, getSubrank, latestORM, overallScore, getPrecisePercentOverall, parseDate, preciseRankValue } from '../engine/rank.js';
 import { getLogs, getSettings, getHabits, setUnit, clearLogs, importLogs, importHabitsData } from '../engine/state.js';
 import { exportData, parseImport, storageUsage } from '../engine/storage.js';
 import { injectBadge, badge } from './badge.js';
@@ -63,7 +63,7 @@ export function renderProfile() {
   const aesIds      = MUSCLES.filter(m => m.cat === 'aes').map(m => m.id);
 
   const avgOf = ids => {
-    const scores = ids.map(id => rankOf(id, latestORM(id, logs)));
+    const scores = ids.map(id => preciseRankValue(id, latestORM(id, logs)));
     return scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   };
 
@@ -139,9 +139,9 @@ export function renderProfile() {
   const rankEl = document.getElementById('profile-metric-ranks');
   if (rankEl) {
     const sorted = [...MUSCLES]
-      .map(m => ({ m, orm: latestORM(m.id, logs), ri: rankOf(m.id, latestORM(m.id, logs)) }))
+      .map(m => ({ m, orm: latestORM(m.id, logs), ri: rankOf(m.id, latestORM(m.id, logs)), prv: preciseRankValue(m.id, latestORM(m.id, logs)) }))
       .filter(x => x.orm > 0)
-      .sort((a, b) => b.ri - a.ri || b.orm - a.orm)
+      .sort((a, b) => b.prv - a.prv)
       .slice(0, 6);
     rankEl.innerHTML = sorted.length ? sorted.map((x, idx) => {
       const rk  = RANKS[x.ri];
@@ -175,8 +175,8 @@ export function renderProfile() {
   MUSCLES.forEach(m => {
     const entries = logs[m.id] || [];
     if (entries.length < 2) return;
-    const first = rankOf(m.id, entries[0].oneRM);
-    const last  = rankOf(m.id, entries[entries.length - 1].oneRM);
+    const first = preciseRankValue(m.id, entries[0].oneRM);
+    const last  = preciseRankValue(m.id, entries[entries.length - 1].oneRM);
     const jump  = last - first;
     if (jump > bestJump) { bestJump = jump; mostImproved = m.label; }
   });
@@ -207,7 +207,7 @@ export function renderProfile() {
       <div class="streak-icon">📈</div>
       <div class="streak-info">
         <div class="streak-val" style="color:#4ce0c3;font-size:14px">${mostImproved}</div>
-        <div class="streak-lbl">Most improved${bestJump > 0 ? ' · +'+ bestJump +' tiers' : ''}</div>
+        <div class="streak-lbl">Most improved${bestJump > 0 ? ' · +'+ bestJump.toFixed(1) +' tiers' : ''}</div>
       </div>
     </div>`;
 
