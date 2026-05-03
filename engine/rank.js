@@ -44,10 +44,10 @@ export function getSubrank(mid, orm) {
   const t = THRESH[mid] || [];
   const cur = rank > 0 ? t[rank - 1] : 0;
   const nxt = rank < 7 ? t[rank] : (t[t.length - 1] || 1);
-  if (rank === 0) { const p = (orm / (nxt || 1)) * 100; return p < 33 ? 0 : p < 66 ? 1 : 2; }
+  if (rank === 0) { const p = (orm / (nxt || 1)) * 100; return p < 33.33 ? 0 : p < 66.66 ? 1 : 2; }
   if (rank >= 7) return 2;
   const p = ((orm - cur) / (nxt - cur)) * 100;
-  return p < 33 ? 0 : p < 66 ? 1 : 2;
+  return p < 33.33 ? 0 : p < 66.66 ? 1 : 2;
 }
 
 // ── CONTINUOUS RANK FRACTION (0–1 within current tier)
@@ -113,7 +113,7 @@ export function getPrecisePercent(mid, orm) {
   }
   const curW = rank > 0 ? t[rank - 1] : 0;
   const nxtW = t[rank] || 1;
-  const curP = rank > 0 ? TOP_PCT_ARR[rank] : 99;
+  const curP = TOP_PCT_ARR[rank];
   const nxtP = TOP_PCT_ARR[rank + 1];
   const fraction = (orm - curW) / (nxtW - curW);
   return (curP - (fraction * (curP - nxtP))).toFixed(1);

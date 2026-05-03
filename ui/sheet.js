@@ -18,7 +18,7 @@ export function openSheet(mid) {
 // ── CLOSE
 export function closeSheet() {
   document.getElementById('detail-sheet').classList.remove('open');
-  MUSCLES.forEach(m => [...m.front, ...m.back].forEach(id => {
+  MUSCLES.forEach(m => [...(m.front || []), ...(m.back || []), ...(m.inner || [])].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.classList.remove('sel', 'dim');
   }));
@@ -94,7 +94,7 @@ function _renderSheet(mid) {
   ledgerEl.innerHTML = _milestoneLedgerHTML(mid, orm);
 
   // Bodygraph highlight
-  MUSCLES.forEach(mx => [...mx.front, ...mx.back].forEach(id => {
+  MUSCLES.forEach(mx => [...(mx.front || []), ...(mx.back || []), ...(mx.inner || [])].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     el.classList.remove('sel', 'dim');
