@@ -44,7 +44,7 @@ function _innerSVG() {
       <ellipse cx="74" cy="22" rx="12" ry="9" fill="#777"/>
       <path d="M64 21 Q68 17 72 21 Q76 17 80 21 Q84 17 84 23" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="1.2"/>
     </g>
-    <g class="mr" id="I-heart" data-m="hrv" onclick="LR.openSheet('hrv')">
+    <g class="mr" id="I-heart" data-m="restHeart" onclick="LR.openSheet('restHeart')">
       <path d="M62 63 Q58 57 62 53 Q66 49 70 55 Q74 49 78 53 Q82 57 78 63 L70 73 Z" fill="#777"/>
     </g>
     <g class="mr" id="I-lung-l" data-m="vo2max" onclick="LR.openSheet('vo2max')">
@@ -56,14 +56,14 @@ function _innerSVG() {
     <g class="mr" id="I-core" data-m="plank" onclick="LR.openSheet('plank')">
       <rect x="55" y="104" width="38" height="58" rx="6" fill="#777"/>
     </g>
-    <g class="mr" id="I-hand-l" data-m="restHeart" onclick="LR.openSheet('restHeart')">
+    <g class="mr" id="I-hand-l" data-m="hrv" onclick="LR.openSheet('hrv')">
       <rect x="4" y="190" width="15" height="10" rx="3" fill="#777"/>
       <rect x="4"  y="181" width="3" height="11" rx="2" fill="#777"/>
       <rect x="8"  y="178" width="3" height="13" rx="2" fill="#777"/>
       <rect x="12" y="179" width="3" height="12" rx="2" fill="#777"/>
       <rect x="16" y="182" width="3" height="9"  rx="2" fill="#777"/>
     </g>
-    <g class="mr" id="I-hand-r" data-m="restHeart" onclick="LR.openSheet('restHeart')">
+    <g class="mr" id="I-hand-r" data-m="hrv" onclick="LR.openSheet('hrv')">
       <rect x="129" y="190" width="15" height="10" rx="3" fill="#777"/>
       <rect x="141" y="181" width="3" height="11" rx="2" fill="#777"/>
       <rect x="137" y="178" width="3" height="13" rx="2" fill="#777"/>

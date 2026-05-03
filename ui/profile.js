@@ -69,7 +69,7 @@ export function renderProfile() {
 
   const categoryBreakdown = [
     { label: 'Strength',    ids: strengthIds,                                                                            icon: '💪' },
-    { label: 'Performance', ids: innerIds.filter(id => ['run20k','vert','plank','mobility','restHeart'].includes(id)),    icon: '⚡' },
+    { label: 'Performance', ids: innerIds.filter(id => ['run5k','vert','plank','mobility','restHeart'].includes(id)),    icon: '⚡' },
     { label: 'Recovery',    ids: innerIds.filter(id => ['sleep','hrv','vo2max','mass'].includes(id)),                    icon: '❤️' },
     { label: 'Aesthetics',  ids: aesIds,                                                                                 icon: '✨' },
   ];
